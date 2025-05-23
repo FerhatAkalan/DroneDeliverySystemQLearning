@@ -23,17 +23,11 @@ This project is an intelligent drone simulator that optimizes urban package deli
 
 ## ✨ Features
 
-### 🤖 Reinforcement Learning
-- **Q-Learning Algorithm**: Drone learns optimal strategies
-- **Epsilon-Greedy**: Balance between exploration and exploitation
-- **Experience Replay**: Learning from past experiences
-- **Adjustable hyperparameters**: Alpha, gamma, epsilon decay
-
-### 🎮 Interactive Simulation
-- **Visual Grid Environment**: Customizable city map with 5x5 size
-- **Real-Time Animation**: Takeoff, landing, and movement animations
-- **Manual Play Mode**: Control the drone with keyboard (WASD/Arrow keys)
-- **AI Demo Mode**: Watch the trained agent's performance
+- 🤖 **Q-Learning Algorithm** with adjustable hyperparameters
+- 🎮 **Interactive Simulation** with real-time animations  
+- 🎯 **Manual & AI Modes** - Control drone or watch AI performance
+- 💾 **Model Management** - Save/load trained Q-tables
+- 🔋 **Battery System** with energy costs for different actions
 
 ### 📊 Simulation Details
 - 🟢 **Cargo Depot**: Center where packages are picked up
@@ -48,33 +42,21 @@ This project is an intelligent drone simulator that optimizes urban package deli
 
 ## 🛠️ Technology Stack
 
-| Technology | Description | Version |
-|-----------|-------------|---------|
-| ![Python](https://img.shields.io/badge/-Python-3776ab?style=flat&logo=python&logoColor=white) | Main programming language | 3.10+ |
-| ![PyQt5](https://img.shields.io/badge/-PyQt5-41CD52?style=flat&logo=qt&logoColor=white) | GUI framework | 5.15+ |
-| ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat&logo=numpy&logoColor=white) | Numerical computations | Latest |
+- **Python 3.10+** - Main programming language
+- **PyQt5** - GUI framework  
+- **NumPy** - Numerical computations
 
 ## 🚀 Installation
 
-### Requirements
 ```bash
 # Python 3.10 or higher is required
 python --version
-```
-
-### 1. Clone the Project
-```bash
+# 1. Clone the Project
 git clone https://github.com/FerhatAkalan/DroneDeliverySystemQLearning.git
 cd DroneDeliverySystemQLearning
-```
-
-### 2. Install Dependencies
-```bash
+# 2. Install Dependencies
 pip install PyQt5 numpy
-```
-
-### 3. Start the Simulator
-```bash
+# 3. Start the Simulator
 python drone_delivery_system_q_learning.py
 ```
 
@@ -97,13 +79,6 @@ python drone_delivery_system_q_learning.py
 1. After training, use the "🤖 Play with AI" button
 2. Watch the trained drone's performance in real time
 3. You can adjust the simulation speed
-
-### 🎮 Manual Control
-1. Select "🧑‍💻 Human Mode"
-2. Keyboard controls:
-   - **Move**: `WASD` or `↑↓←→` arrow keys
-   - **Takeoff/Land**: `Space`
-   - **Pick/Drop Cargo**: `E`
 
 ## 🧠 Q-Learning Algorithm
 
@@ -131,18 +106,6 @@ python drone_delivery_system_q_learning.py
 - **Battery depletion**: -100 points
 - **Timeout**: -50 points
 
-### 📈 State Representation
-```python
-state = (x, y, has_cargo, is_flying, delivery_status, battery_level, delivery_indices)
-```
-
-- `(x, y)`: Drone coordinates
-- `has_cargo`: Cargo carrying status
-- `is_flying`: Flight status
-- `delivery_status`: Delivery completion status
-- `battery_level`: Battery level (0-10)
-- `delivery_indices`: Active delivery points
-
 ## 🎥 Project Video
 https://github.com/user-attachments/assets/dc8752a9-d821-4c75-901b-993b0077d4b4
 
@@ -150,9 +113,7 @@ https://github.com/user-attachments/assets/dc8752a9-d821-4c75-901b-993b0077d4b4
 
 ### 📊 Training Performance
 - **Grid Size**: 5x5
-- **Number of Episodes**: 50000
-- **Average Reward**: ~450 points
-- **Success Rate**: 85%+ (completing all deliveries)
+- **Training**: 50K episodes, 85%+ success rate
 
 ### 📈 Learning Curve
 As training progresses, drone performance increases significantly:
@@ -214,17 +175,11 @@ Bu proje, **Pekiştirmeli Öğrenme (Q-Learning)** algoritması kullanarak şehi
 
 ## ✨ Özellikler
 
-### 🤖 Pekiştirmeli Öğrenme
-- **Q-Learning Algoritması**: Dron optimal stratejileri öğrenir
-- **Epsilon-Greedy**: Keşif ve sömürü dengesi
-- **Experience Replay**: Geçmiş deneyimlerden öğrenme
-- **Ayarlanabilir hiperparametreler**: Alpha, gamma, epsilon decay
-
-### 🎮 İnteraktif Simülasyon
-- **Görsel Grid Ortam**: 5x5 boyutlarında özelleştirilebilir şehir haritası
-- **Gerçek Zamanlı Animasyon**: Kalkış, iniş ve hareket animasyonları
-- **Manuel Oynama Modu**: Klavye ile drone kontrolü (WASD/Ok tuşları)
-- **AI Demo Modu**: Eğitilmiş ajanın performansını izleme
+- 🤖 **Q-Learning Algoritması** ayarlanabilir hiperparametrelerle
+- 🎮 **İnteraktif Simülasyon** gerçek zamanlı animasyonlarla
+- 🎯 **Manuel & AI Modları** - Drone kontrolü veya AI performansı izleme
+- 💾 **Model Yönetimi** - Eğitilmiş Q-tablolarını kaydetme/yükleme
+- 🔋 **Batarya Sistemi** farklı eylemler için enerji maliyetleri
 
 ### 📊 Simülasyon Detayları
 - 🟢 **Kargo Deposu**: Paketlerin alındığı merkez
@@ -232,40 +187,23 @@ Bu proje, **Pekiştirmeli Öğrenme (Q-Learning)** algoritması kullanarak şehi
 - 🔵 **Drone**: Akıllı ajan (batarya, kargo durumu gösterimi)
 - 🔋 **Batarya Yönetimi**: Hareket, kalkış, iniş için farklı enerji maliyetleri
 
-### 💾 Model Yönetimi
-- **Q-Table Kaydetme/Yükleme**: Eğitilmiş modelleri saklama
-- **Eğitim İstatistikleri**: Bölüm başına ödül ve adım takibi
-- **Hız Ayarları**: Eğitim ve simülasyon hızlarını kontrol etme
-
 ## 🛠️ Teknoloji Stack
 
-| Teknoloji | Açıklama | Versiyon |
-|-----------|----------|----------|
-| ![Python](https://img.shields.io/badge/-Python-3776ab?style=flat&logo=python&logoColor=white) | Ana programlama dili | 3.10+ |
-| ![PyQt5](https://img.shields.io/badge/-PyQt5-41CD52?style=flat&logo=qt&logoColor=white) | GUI framework | 5.15+ |
-| ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat&logo=numpy&logoColor=white) | Sayısal hesaplamalar | Latest |
+- **Python 3.10+** - Ana programlama dili
+- **PyQt5** - GUI framework
+- **NumPy** - Sayısal hesaplamalar
 
 ## 🚀 Kurulum
 
-### Gereksinimler
 ```bash
 # Python 3.10 veya üzeri gereklidir
 python --version
-```
-
-### 1. Projeyi Klonlayın
-```bash
+# 1. Projeyi Klonlayın
 git clone https://github.com/FerhatAkalan/DroneDeliverySystemQLearning.git
 cd DroneDeliverySystemQLearning
-```
-
-### 2. Bağımlılıkları Yükleyin
-```bash
+# 2. Bağımlılıkları Yükleyin
 pip install PyQt5 numpy
-```
-
-### 3. Simülatörü Başlatın
-```bash
+# 3. Simülatörü Başlatın
 python drone_delivery_system_q_learning.py
 ```
 
@@ -288,13 +226,6 @@ python drone_delivery_system_q_learning.py
 1. Eğitim tamamlandıktan sonra "🤖 AI ile Oyna" butonunu kullanın
 2. Eğitilmiş dronun performansını gerçek zamanlı izleyin
 3. Simülasyon hızını ayarlayabilirsiniz
-
-### 🎮 Manuel Kontrol
-1. "🧑‍💻 Human Modu" seçin
-2. Klavye kontrolleri:
-   - **Hareket**: `WASD` veya `↑↓←→` ok tuşları
-   - **Kalkış/İniş**: `Space` (Boşluk)
-   - **Kargo Al/Bırak**: `E`
 
 ## 🧠 Q-Learning Algoritması
 
@@ -322,18 +253,6 @@ python drone_delivery_system_q_learning.py
 - **Batarya bitimi**: -100 puan
 - **Zaman aşımı**: -50 puan
 
-### 📈 Durum Temsilï
-```python
-state = (x, y, has_cargo, is_flying, delivery_status, battery_level, delivery_indices)
-```
-
-- `(x, y)`: Drone koordinatları
-- `has_cargo`: Kargo taşıma durumu
-- `is_flying`: Uçuş durumu
-- `delivery_status`: Teslimat tamamlanma durumu
-- `battery_level`: Batarya seviyesi (0-10)
-- `delivery_indices`: Aktif teslimat noktaları
-
 ## 🎥 Proje Videosu
 https://github.com/user-attachments/assets/dc8752a9-d821-4c75-901b-993b0077d4b4
 
@@ -341,9 +260,7 @@ https://github.com/user-attachments/assets/dc8752a9-d821-4c75-901b-993b0077d4b4
 
 ### 📊 Eğitim Performansı
 - **Grid Boyutu**: 5x5
-- **Episode Sayısı**: 50000
-- **Ortalama Ödül**: ~450 puan
-- **Başarı Oranı**: %85+ (tüm teslimatları tamamlama)
+- **Eğitim**: 50K episode, %85+ başarı oranı
 
 ### 📈 Öğrenme Eğrisi
 Eğitim ilerledikçe dronun performansı belirgin şekilde artar:
