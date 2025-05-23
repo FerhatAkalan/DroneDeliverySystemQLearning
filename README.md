@@ -153,6 +153,12 @@ If you want to contribute to this project:
   <sub>Made with ❤️ by Ferhat Akalan</sub>
 </div>
 
+---
+
+</br>
+
+---
+
 ## <a name="türkçe"></a>
 
 # 🚁 Q-Learning ile Drone Teslimat Sistemi
