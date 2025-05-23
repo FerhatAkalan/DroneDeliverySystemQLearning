@@ -1,0 +1,3 @@
+# Core dependencies for Drone Delivery System Q-Learning
+PyQt5>=5.15.0
+numpy>=1.21.0
